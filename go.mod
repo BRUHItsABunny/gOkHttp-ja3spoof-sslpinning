@@ -2,8 +2,6 @@ module github.com/BRUHItsABunny/gokhttp_ja3spoof_sslpinning
 
 go 1.21
 
-replace github.com/cornelk/hashmap v1.0.8 => github.com/BRUHItsABunny/hashmap v0.0.0-20221125164545-8b59f13d589a
-
 replace github.com/ooni/oohttp v0.7.3 => github.com/BRUHItsABunny/oohttp v0.0.0-20241104073456-f2e7ae5134c6
 
 require (
