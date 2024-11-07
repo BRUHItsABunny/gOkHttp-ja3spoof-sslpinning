@@ -2,7 +2,6 @@ package gokhttp_ja3spoof_sslpinning
 
 import (
 	"context"
-	"crypto/tls"
 	"fmt"
 	gokhttp "github.com/BRUHItsABunny/gOkHttp"
 	gokhttp_ja3spoof "github.com/BRUHItsABunny/gOkHttp-ja3spoof"
@@ -24,13 +23,9 @@ func TestNewSSLPinningOption(t *testing.T) {
 	hClient, err := gokhttp.NewHTTPClient(
 		opt,
 		pinner,
+		// gokhttp_client.NewProxyOption("http://15.204.161.192:18080"),
 	)
 	require.NoError(t, err, "gokhttp.NewHTTPClient: errored unexpectedly.")
-
-	if hClient.Transport.(*oohttp.StdlibTransport).Transport.TLSClientConfig == nil {
-		hClient.Transport.(*oohttp.StdlibTransport).Transport.TLSClientConfig = &tls.Config{}
-	}
-	hClient.Transport.(*oohttp.StdlibTransport).Transport.TLSClientConfig.InsecureSkipVerify = true
 
 	// HTTP 2 stuff
 	hClient.Transport.(*oohttp.StdlibTransport).Transport.HasCustomInitialSettings = true
