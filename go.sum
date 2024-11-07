@@ -6,12 +6,8 @@ github.com/BRUHItsABunny/gOkHttp-ja3spoof v0.0.19 h1:UVRN0+diphByTDFQ8DoGqdV0gNM
 github.com/BRUHItsABunny/gOkHttp-ja3spoof v0.0.19/go.mod h1:hqMWXP5ccXwkNzKP9Uunmydi8visHXDSuArRLc6JQzE=
 github.com/BRUHItsABunny/go-device-utils v0.0.5 h1:oJG9s7wte4adX+43coRhtMjmZbpteggrUFv8EYgzuTU=
 github.com/BRUHItsABunny/go-device-utils v0.0.5/go.mod h1:neXmdKHMQnmv2Whq6t77iPWk945WrP9Op2olIC3N6xk=
-github.com/BRUHItsABunny/hashmap v0.0.0-20221125164545-8b59f13d589a h1:4a2zKFrc2vqn8UiD6xmSw2mHwph/g1RodVyLeRvjyic=
-github.com/BRUHItsABunny/hashmap v0.0.0-20221125164545-8b59f13d589a/go.mod h1:RfZb7JO3RviW/rT6emczVuC/oxpdz4UsSB2LJSclR1k=
-github.com/BRUHItsABunny/oohttp v0.0.0-20241103215825-4b34daf53b0a h1:MzzRWI18TMW50T2wXtBJnzAGO6JkIGxJhLGgMC1Rv9k=
-github.com/BRUHItsABunny/oohttp v0.0.0-20241103215825-4b34daf53b0a/go.mod h1:437PcaW/17624XJ2mG+7ZcpYlXwhKPP6JZLnNTz3b8o=
-github.com/BRUHItsABunny/oohttp v0.0.0-20241104073456-f2e7ae5134c6 h1:v3BrpEWx6RlRWooMxDaGKctsKkjgQ5QdwdnsI9gLQT0=
-github.com/BRUHItsABunny/oohttp v0.0.0-20241104073456-f2e7ae5134c6/go.mod h1:437PcaW/17624XJ2mG+7ZcpYlXwhKPP6JZLnNTz3b8o=
+github.com/BRUHItsABunny/oohttp v0.0.0-20241107075117-a9672b1dbb4b h1:KLehB5GUU8qIOYXrF3CP+Qo0cS+ZcDF5QEzHF8kecDw=
+github.com/BRUHItsABunny/oohttp v0.0.0-20241107075117-a9672b1dbb4b/go.mod h1:437PcaW/17624XJ2mG+7ZcpYlXwhKPP6JZLnNTz3b8o=
 github.com/OneOfOne/xxhash v1.2.8 h1:31czK/TI9sNkxIKfaUfGlU47BAxQ0ztGgd9vPyqimf8=
 github.com/OneOfOne/xxhash v1.2.8/go.mod h1:eZbhyaAYD41SGSSsnmcpxVoRiQ/MPUTjUdIIOT9Um7Q=
 github.com/andybalholm/brotli v1.1.1 h1:PR2pgnyFznKEugtsUo0xLdDop5SKXd5Qf5ysW+7XdTA=

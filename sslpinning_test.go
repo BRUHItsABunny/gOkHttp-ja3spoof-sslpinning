@@ -15,7 +15,7 @@ import (
 
 func TestNewSSLPinningOption(t *testing.T) {
 	pinner := NewSSLPinningOption()
-	err := pinner.AddPin("tls.peet.ws", true, "sha256\\EOTuPQQdoVYMr0N3xm/wxw1AO07cihwBSQAV6P9n+oo=")
+	err := pinner.AddPin("tls.peet.ws", false, "sha256\\EOTuPQQdoVYMr0N3xm/wxw1AO07cihwBSQAV6P9n+oo=")
 	require.NoError(t, err, "pinner.AddPin: errored unexpectedly.")
 
 	opt := gokhttp_ja3spoof.NewJa3SpoofingOptionV2(nil, &utls.HelloChrome_120_PQ)
@@ -23,6 +23,9 @@ func TestNewSSLPinningOption(t *testing.T) {
 	hClient, err := gokhttp.NewHTTPClient(
 		opt,
 		pinner,
+		// Public non-intercepting SOCKS5 proxy
+		// gokhttp_client.NewProxyOption("http://66.29.154.105:1080"),
+		// Public non-intercepting HTTP proxy
 		// gokhttp_client.NewProxyOption("http://15.204.161.192:18080"),
 	)
 	require.NoError(t, err, "gokhttp.NewHTTPClient: errored unexpectedly.")
