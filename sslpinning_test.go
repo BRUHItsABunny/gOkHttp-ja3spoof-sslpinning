@@ -26,9 +26,8 @@ func TestNewSSLPinningOption(t *testing.T) {
 		// This one doesn't throw errors
 		// Public non-intercepting HTTP proxy
 		// gokhttp_client.NewProxyOption("http://15.204.161.192:18080"),
-		// This one shouldn't throw errors but does, can't find a socks proxy that isn't trying to MITM me
-		// Public non-intercepting SOCKS5 proxy
-		// gokhttp_client.NewProxyOption("socks5://98.191.0.47:4145"),
+		// TOR local SOCKS5 proxy
+		// gokhttp_client.NewProxyOption("socks5://127.0.0.1:9050"),
 		// These throw expected errors
 		// Intercepting HTTP proxy
 		// gokhttp_client.NewProxyOption("http://127.0.0.1:8888"),
