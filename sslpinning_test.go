@@ -15,7 +15,7 @@ import (
 
 func TestNewSSLPinningOption(t *testing.T) {
 	pinner := NewSSLPinningOption()
-	err := pinner.AddPin("tls.peet.ws", false, "sha256\\EOTuPQQdoVYMr0N3xm/wxw1AO07cihwBSQAV6P9n+oo=")
+	err := pinner.AddPin("tls.peet.ws", true, "sha256\\EOTuPQQdoVYMr0N3xm/wxw1AO07cihwBSQAV6P9n+oo=")
 	require.NoError(t, err, "pinner.AddPin: errored unexpectedly.")
 
 	opt := gokhttp_ja3spoof.NewJa3SpoofingOptionV2(nil, &utls.HelloChrome_120_PQ)
@@ -23,10 +23,17 @@ func TestNewSSLPinningOption(t *testing.T) {
 	hClient, err := gokhttp.NewHTTPClient(
 		opt,
 		pinner,
-		// Public non-intercepting SOCKS5 proxy
-		// gokhttp_client.NewProxyOption("http://66.29.154.105:1080"),
+		// This one doesn't throw errors
 		// Public non-intercepting HTTP proxy
 		// gokhttp_client.NewProxyOption("http://15.204.161.192:18080"),
+		// This one shouldn't throw errors but does, can't find a socks proxy that isn't trying to MITM me
+		// Public non-intercepting SOCKS5 proxy
+		// gokhttp_client.NewProxyOption("socks5://98.191.0.47:4145"),
+		// These throw expected errors
+		// Intercepting HTTP proxy
+		// gokhttp_client.NewProxyOption("http://127.0.0.1:8888"),
+		// Intercepting SOCKS proxy
+		// gokhttp_client.NewProxyOption("socks5://127.0.0.1:8889"),
 	)
 	require.NoError(t, err, "gokhttp.NewHTTPClient: errored unexpectedly.")
 
